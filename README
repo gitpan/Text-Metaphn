@@ -1,0 +1,77 @@
+Sunday, February 21, 1999
+
+This is the Text::Metaphone module with shared libraries compiled for 
+MacPerl.  Shared libraries run only on PPC and CFM68K versions, not 
+non-CFM 68K versions.
+
+This was compiled with MPW and Codewarrior.  Passed all tests.  
+I have no 68K machine so I can't test the CFM68K version.  Let me 
+know of any problems.
+
+I had to change the file "metaphone.c" to the name "metaphone_c.c",
+and changed the Makefile.PL accordingly, since Mac OS filesystems
+are not case-sensitive.
+
+Also, see the MMP page:
+
+    http://pudge.net/mmp/
+
+Best installed using cpan-mac, either with the CPAN shell,
+or the installme droplet.  From the CPAN shell, type:
+
+    cpan> install CNANDOR/Text-Metaphn-1.95-bin-1-Mac.tgz
+
+--
+Chris Nandor          mailto:pudge@pobox.com         http://pudge.net/
+%PGPKey = ('B76E72AD', [1024, '0824090B CE73CA10  1FF77F13 8180B6B6'])
+
+#===================================
+
+NAME
+
+Text::Metaphone - A modern soundex.  Phonetic encoding of words.
+
+
+SYNOPSIS
+
+  use Text::Metaphone;
+  $phoned_words = Metaphone('Schwern');
+  
+
+DESCRIPTION
+
+C<Metaphone()> is a function whereby a string/word is broken down into
+a rough approximation of its english phonetic pronunciation.  Very
+similar in concept and purpose to soundex, but much more
+comprehensive in its approach.
+
+
+AUTHOR
+
+Michael G Schwern <schwern@pobox.com>
+
+
+WHAT IS THIS?
+
+This is Text::Metaphone, a perl module.  Please see the README that comes with
+this distribution.
+
+HOW DO I INSTALL IT?
+
+To install this module, cd to the directory that contains this README
+file and type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+To install this module into a specific directory, do:
+   perl Makefile.PL PREFIX=/name/of/the/directory
+   ...the rest is the same...
+
+Please also read the perlmodinstall man page, if available.
+
+WHAT EXTRAS DO I NEED?
+
+	An ANSI C compiler
